@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Success!</title>
+</head>
+<body>
+<style>
+    body{
+        background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=1080);
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        h1{
+color:#00cbfe;
+}
+p{
+color:#fff;
+font-size: 150%;}
+img{
+width:100%;}
+#popup_content_wrap {
+width: 100%;
+    height: 100%;   
+    top: 0;
+    left: 0;   
+ position: fixed;	
+    background: rgba(0, 0, 0, 0.74);
+    z-index: 9999999;
+}
+#popup_content {
+    width: 50%;
+    height: 300px;
+    padding:20px;
+	 position: relative;
+	top: 15%;
+    left: 25%;
+    background: #1b100ed9;
+    border: 10px solid #00cbfe;  
+   
+    
+}
+#clckme{
+    color: darkgoldenrod;
+
+}
+#btnn{
+    color: rgb(0, 0, 0);
+}
+</style>
+
+
+<div id="popup_content_wrap" >
+    <div id="popup_content">
+        <center>
+             <h1>Successfully Shortened...</h1> 
+<hr><hr>	 <p>Your Url is Success Shortened to <a href="http://{{full}}" id="p1">{{full}}</a>.  <a id="clckme" href="javascript:copyToClipboard('#p1')">Click Me </a>to Copy Url to Clipboard</p>
+             <button class="btn btn-warning"><a id="btnn" href="">Okay.</a></button> 
+        </center>
+    </div>
+</div>
+
+<script>
+    function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+    }
+
+    </script>
+    
+</body>
+</html>

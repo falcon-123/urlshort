@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Url shortner</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container sect">
+  <h2 id="h2">Mini URL Shortner</h2>
+  <br><br><br>
+  <form class="form-horizontal" action="" method="POST">
+    {% csrf_token %} 
+    <div class="form-group">
+      <div class="col-sm-10">
+        <div class="row justify-content-center ">
+        <input type="text" class="form-control btn-lg" id="email" placeholder="Enter url to shorten" name="url">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <button id="btnb" type="submit" class="btn btn-warning btn-lg">Shorten Url</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+
+<style>
+  body{
+    background-image: url(https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1920&q=1080);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  #h2{
+    margin-top: 5%;
+    margin-bottom: 3%;
+    color: rgb(98, 148, 255)!important;
+    font-size: 200%!important;
+    text-align: center
+  }
+  .sect{
+    margin-top: 5%;
+  }
+  #btnb{
+    margin-top: 3.5%;
+    color: rgb(0, 0, 0) !important;
+  }
+  #email{
+    width: 80%;
+    margin-left: 15%;
+
+  }
+</style>
+</body>
+</html>
